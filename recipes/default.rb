@@ -6,6 +6,9 @@
 execute 'install' do
   command 'yum -y install ipa-client'
 end
+execute 'echo' do
+  command 'echo 10.0.1.113 awsfreipa.rean.local awsfreipa >> /etc/hosts'
+end
 execute 'yum' do
   command 'yum -y install firewalld'
 end
