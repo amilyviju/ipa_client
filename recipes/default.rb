@@ -7,7 +7,7 @@ execute 'install' do
   command 'yum -y install ipa-client'
 end
 execute 'echo' do
-  command 'echo 10.0.1.113 awsfreipa.rean.local awsfreipa >> /etc/hosts'
+  command 'echo 10.0.1.84 awsfreipa.rean.internal awsfreipa >> /etc/hosts'
 end
 execute 'yum' do
   command 'yum -y install firewalld'
@@ -46,5 +46,5 @@ execute 'port7' do
   command 'firewall-cmd --zone=public --add-port=123/udp'
 end
 execute 'installation' do
-  command 'ipa-client-install -U --domain=rean.local --force-ntpd  --force -p admin -w password --server=awsfreipa.rean.local'
+  command 'ipa-client-install -U --domain=rean.internal --force-ntpd  --force -p admin -w password@123 --server=awsfreipa.rean.internal'
 end
