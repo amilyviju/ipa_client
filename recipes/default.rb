@@ -22,7 +22,7 @@ execute 'yum' do
   command 'yum install firewalld'
 end
 execute 'set-hostname' do
-  command 'hostnamectl set-hostname ipaclient03.rean.local --static'
+  command 'hostnamectl set-hostname ipaclient02.rean.local --static'
 end
 execute 'zone' do
   command 'firewall-cmd --permanent --zone=public --change-interface=eth0'
