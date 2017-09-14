@@ -3,6 +3,6 @@
 
 You can change the hosts file entry and installation options by editing the following commands in the default.rb recipe:
 
-command 'echo 10.0.1.84 awsfreipa.rean.internal awsfreipa >> /etc/hosts'
+command 'echo <server-pvt-ip> <server-FQDN> <hostname> >> /etc/hosts'
 
-command 'ipa-client-install -U --domain=rean.internal --force-ntpd  --force -p admin -w password@123 --server=awsfreipa.rean.internal'
+command 'ipa-client-install -U --domain=<domain-name> --force-ntpd  --force -p <administrative-user> -w <admin-password> --server=<server-FQDN>'
