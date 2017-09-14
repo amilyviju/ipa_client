@@ -1,5 +1,5 @@
 #
-# Cookbook:: client1
+# Cookbook:: freeipa-client
 # Recipe:: default
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
